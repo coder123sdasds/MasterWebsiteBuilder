@@ -98,6 +98,15 @@ footer{padding:30px 0 40px;color:var(--mut);font-size:14px}
 .mob .btn{display:block;text-align:center}
 @media (min-width:821px){.mob{display:none}body{padding-bottom:0}}
 @media (max-width:820px){.hero{grid-template-columns:1fr;padding:44px 0 56px;gap:34px}.strip .w,.steps,.plans,.fgrid,.inc{grid-template-columns:1fr}nav ul{display:none}section{padding:60px 0}}
+dialog{border:2px solid var(--fg);border-radius:18px;background:var(--bg);color:var(--fg);padding:30px;width:min(440px,calc(100vw - 32px));position:fixed}
+dialog::backdrop{background:rgba(0,0,0,.6)}
+dialog .btn{display:block;width:100%;text-align:center;margin-top:12px}
+dialog .dp{color:var(--mut);margin:0 0 14px}
+dialog label{display:block;font-size:14px;font-weight:600;margin:6px 0 5px}
+dialog input{width:100%;font:inherit;font-size:16px;color:var(--fg);background:transparent;border:1px solid var(--mut);border-radius:10px;padding:12px 14px}
+dialog h3{font-size:30px;margin:0 28px 6px 0}
+.lnk{background:none;border:0;color:var(--mut);text-decoration:underline;cursor:pointer;font:inherit;margin-top:14px;padding:0}
+.xb{position:absolute;top:12px;right:16px;background:none;border:0;color:var(--fg);font-size:30px;line-height:1;cursor:pointer}
 </style></head><body>
 
 <nav><div class="w">
@@ -138,18 +147,15 @@ footer{padding:30px 0 40px;color:var(--mut);font-size:14px}
 <div class="plans">
 <div class="plan"><h3>Starter</h3><div class="price">$499</div><p class="for">One-page site for a new or small business.</p>
 <ul><li>One-page site</li><li>Call button and quote form</li><li>Works on every phone</li><li>Fast loading and easy to read</li></ul>
-<a class="btn o" href="#start" data-plan="Starter ($499)">Get started</a>
-<a class="pay" href="https://buy.stripe.com/4gMdR9aWl0Gm5FQ46H4ZG07" target="_blank" rel="noopener">Already approved? Pay now</a></div>
+<a class="btn o" href="#start" data-plan="Starter ($499)">Get started</a></div>
 <div class="plan pop"><span class="tag">Most popular</span><h3>Business</h3><div class="price">$1,200</div><p class="for">A full site that explains every service you offer.</p>
 <ul><li>Up to 5 pages</li><li>A page for each main service</li><li>Photo gallery of your work</li><li>Changes after your preview</li></ul>
-<a class="btn" href="#start" data-plan="Business ($1,200)">Get started</a>
-<a class="pay" href="https://buy.stripe.com/4gM4gz2pPgFk2tE9r14ZG08" target="_blank" rel="noopener">Already approved? Pay now</a></div>
+<a class="btn" href="#start" data-plan="Business ($1,200)">Get started</a></div>
 <div class="plan"><h3>Growth</h3><div class="price">$2,500</div><p class="for">Built to bring in more customer requests.</p>
 <ul><li>Everything in Business</li><li>A planning call before we build</li><li>Review request setup</li><li>Priority edits for 30 days</li></ul>
-<a class="btn o" href="#start" data-plan="Growth ($2,500)">Get started</a>
-<a class="pay" href="https://buy.stripe.com/6oU9AT6G5agWgkuav54ZG09" target="_blank" rel="noopener">Already approved? Pay now</a></div>
+<a class="btn o" href="#start" data-plan="Growth ($2,500)">Get started</a></div>
 </div>
-<p class="note">Prefer to pay monthly instead? <a href="#monthly">See the monthly plans</a>. Already approved your preview? Use the link under your plan.</p>
+<p class="note">Prefer to pay monthly instead? <a href="#monthly">See the monthly plans</a>.</p>
 </div></section>
 
 <section><div class="w">
@@ -168,16 +174,13 @@ footer{padding:30px 0 40px;color:var(--mut);font-size:14px}
 <div class="plans">
 <div class="plan"><h3>Starter</h3><div class="price">$49<small>/mo</small></div><p class="for">The Starter website, built and kept running for you.</p>
 <ul><li>The whole Starter website</li><li>Hosting and backups</li><li>Small edits when you need them</li><li>Call button and quote form</li></ul>
-<a class="btn o" href="#start" data-plan="Starter monthly ($49/mo)">Get started</a>
-<a class="pay" href="https://buy.stripe.com/9B628raWl4WC2tEcDd4ZG0a" target="_blank" rel="noopener">Already approved? Subscribe now</a></div>
+<a class="btn o" href="#start" data-plan="Starter monthly ($49/mo)">Get started</a></div>
 <div class="plan pop"><span class="tag">Most popular</span><h3>Business</h3><div class="price">$99<small>/mo</small></div><p class="for">The full Business website, built and kept running for you.</p>
 <ul><li>The whole Business website</li><li>Hosting and backups</li><li>Small edits every month</li><li>Photo gallery of your work</li></ul>
-<a class="btn" href="#start" data-plan="Business monthly ($99/mo)">Get started</a>
-<a class="pay" href="https://buy.stripe.com/fZu4gz3tT88Od8i6eP4ZG0b" target="_blank" rel="noopener">Already approved? Subscribe now</a></div>
+<a class="btn" href="#start" data-plan="Business monthly ($99/mo)">Get started</a></div>
 <div class="plan"><h3>Growth</h3><div class="price">$199<small>/mo</small></div><p class="for">The Growth website, built and kept running for you.</p>
 <ul><li>The whole Growth website</li><li>Hosting and backups</li><li>Priority edits</li><li>Review request setup</li></ul>
-<a class="btn o" href="#start" data-plan="Growth monthly ($199/mo)">Get started</a>
-<a class="pay" href="https://buy.stripe.com/fZu7sL9Sh9cS9W68mX4ZG0c" target="_blank" rel="noopener">Already approved? Subscribe now</a></div>
+<a class="btn o" href="#start" data-plan="Growth monthly ($199/mo)">Get started</a></div>
 </div>
 <p class="note" style="color:var(--mut)">You don't pay for the build up front. The monthly price covers the website and keeping it running.</p>
 </div></section>
@@ -224,10 +227,43 @@ footer{padding:30px 0 40px;color:var(--mut);font-size:14px}
 <footer><div class="w">Inceptly. Websites for local businesses.</div></footer>
 <div class="mob"><a class="btn" href="#start">Get my free preview</a></div>
 
+<dialog id="dlg" aria-labelledby="dt">
+<button class="xb" id="cl" type="button" aria-label="Close">&times;</button>
+<div id="sa"><h3 id="dt">Have you seen your preview?</h3><p class="dp" id="dplan"></p>
+<button class="btn" id="no" type="button">No, show me the free preview</button>
+<button class="btn o" id="yes" type="button">Yes, I've seen it</button></div>
+<div id="sb" hidden><h3>Which company is this?</h3><p class="dp">Enter the business name from your preview.</p>
+<form id="cf"><label for="co">Company name</label><input id="co" required autocomplete="organization">
+<button class="btn" type="submit">Continue to payment</button></form>
+<button class="lnk" id="back" type="button">Back</button></div>
+<div id="sc" hidden><h3>Opening your payment page.</h3><p class="dp">It opens in a new tab. If it didn't, <a id="pl2" target="_blank" rel="noopener" style="text-decoration:underline">click here to pay</a>.</p></div>
+</dialog>
 <script>
 const TO="incepto08@gmail.com"; // change to the email that should receive requests
 const $=id=>document.getElementById(id);
-document.querySelectorAll("[data-plan]").forEach(a=>a.addEventListener("click",()=>{$("pl").value=a.dataset.plan}));
+const PAY={
+"Starter ($499)":"https://buy.stripe.com/4gMdR9aWl0Gm5FQ46H4ZG07",
+"Business ($1,200)":"https://buy.stripe.com/4gM4gz2pPgFk2tE9r14ZG08",
+"Growth ($2,500)":"https://buy.stripe.com/6oU9AT6G5agWgkuav54ZG09",
+"Starter monthly ($49/mo)":"https://buy.stripe.com/9B628raWl4WC2tEcDd4ZG0a",
+"Business monthly ($99/mo)":"https://buy.stripe.com/fZu4gz3tT88Od8i6eP4ZG0b",
+"Growth monthly ($199/mo)":"https://buy.stripe.com/fZu7sL9Sh9cS9W68mX4ZG0c"};
+let cur="";const dlg=$("dlg");
+function step(id){["sa","sb","sc"].forEach(x=>$(x).hidden=x!==id)}
+document.querySelectorAll("[data-plan]").forEach(a=>a.addEventListener("click",e=>{
+ e.preventDefault();cur=a.dataset.plan;$("dplan").textContent="Plan: "+cur;$("co").value="";step("sa");dlg.showModal();
+}));
+$("cl").onclick=()=>dlg.close();
+$("no").onclick=()=>{$("pl").value=cur;dlg.close();$("start").scrollIntoView({block:"start"})};
+$("yes").onclick=()=>{step("sb");$("co").focus()};
+$("back").onclick=()=>step("sa");
+$("cf").addEventListener("submit",e=>{
+ e.preventDefault();
+ const name=$("co").value.trim();if(!name||!PAY[cur])return;
+ const ref=name.replace(/[^A-Za-z0-9_-]+/g,"_").replace(/^_+|_+$/g,"").slice(0,190)||"unknown";
+ const url=PAY[cur]+"?client_reference_id="+encodeURIComponent(ref);
+ $("pl2").href=url;step("sc");window.open(url,"_blank","noopener");
+});
 $("f").addEventListener("submit",e=>{
  e.preventDefault();
  const g=id=>$(id).value.trim();
