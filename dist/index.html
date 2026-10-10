@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Inceptly: websites that get your phone ringing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--fg:#0a0a0a;--mut:#585858;--line:#e4e4e4;--ib:#0a0a0a;--if:#fff;--im:#a8a8a8;--il:#2a2a2a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a0a0a;--fg:#f5f5f5;--mut:#a3a3a3;--line:#262626;--ib:#f5f5f5;--if:#0a0a0a;--im:#585858;--il:#d4d4d4}}
+:root[data-theme="dark"]{--bg:#0a0a0a;--fg:#f5f5f5;--mut:#a3a3a3;--line:#262626;--ib:#f5f5f5;--if:#0a0a0a;--im:#585858;--il:#d4d4d4}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 "Instrument Sans",system-ui,sans-serif;padding-bottom:64px}
+.w{max-width:1080px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;letter-spacing:-.03em;margin:0}
+a{color:inherit}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .w{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font:800 22px "Bricolage Grotesque",sans-serif;letter-spacing:-.04em;text-decoration:none}
+nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:15px}
+nav ul a{text-decoration:none;color:var(--mut)}
+.btn{display:inline-block;background:var(--fg);color:var(--bg);padding:14px 26px;border-radius:999px;font:600 16px "Instrument Sans",sans-serif;text-decoration:none;border:2px solid var(--fg);cursor:pointer}
+.btn.o{background:transparent;color:var(--fg)}
+.btn.s{padding:9px 18px;font-size:15px}
+.inv .btn{background:var(--if);color:var(--ib);border-color:var(--if)}
+.inv .btn.o{background:transparent;color:var(--if)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--fg);outline-offset:3px}
+.inv a:focus-visible,.inv input:focus-visible,.inv select:focus-visible,.inv textarea:focus-visible,.inv button:focus-visible{outline-color:var(--if)}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:72px 0 88px}
+h1{font-size:clamp(44px,7.4vw,92px);line-height:.98;margin-bottom:22px}
+.sub{font-size:20px;color:var(--mut);max-width:30em;margin:0 0 28px}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+.checks{display:flex;flex-wrap:wrap;gap:6px 22px;margin:26px 0 0;padding:0;list-style:none;font-size:15px;color:var(--mut)}
+.checks li::before{content:"\2713\00a0\00a0";color:var(--fg);font-weight:700}
+.br{border:2px solid var(--fg);border-radius:14px;overflow:hidden;background:var(--bg)}
+.br .bar{display:flex;gap:6px;padding:10px 12px;border-bottom:2px solid var(--fg)}
+.br .bar i{width:10px;height:10px;border-radius:50%;border:2px solid var(--fg)}
+.br .pg{padding:20px}
+.sk{height:10px;border-radius:5px;background:var(--line);margin-bottom:9px}
+.sk.h{height:26px;background:var(--fg);width:78%;margin-bottom:12px}
+.sk.b{height:34px;width:44%;border-radius:999px;background:var(--fg);margin:14px 0 18px}
+.br .tri{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.br .tri div{height:54px;border:2px solid var(--fg);border-radius:8px}
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.strip .w{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;padding-top:36px;padding-bottom:36px}
+.strip h3{font-size:22px;margin-bottom:6px}
+.strip p{margin:0;color:var(--mut);font-size:16px}
+section{padding:84px 0}
+h2{font-size:clamp(34px,5vw,56px);line-height:1.02;margin-bottom:34px;max-width:14em}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.steps div{border-top:2px solid var(--fg);padding-top:16px}
+.steps b{display:block;font:700 22px "Bricolage Grotesque",sans-serif;margin-bottom:6px}
+.steps span{color:var(--mut)}
+.inv{background:var(--ib);color:var(--if)}
+.inv .mut,.inv p{color:var(--im)}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.price small{font:500 18px "Instrument Sans",sans-serif;letter-spacing:0}
+.plan{border:1px solid var(--il);border-radius:16px;padding:28px;display:flex;flex-direction:column}
+.plan.pop{border:2px solid var(--if)}
+.plan h3{font-size:26px}
+.price{font:800 54px/1 "Bricolage Grotesque",sans-serif;letter-spacing:-.04em;margin:14px 0 4px;color:var(--if)}
+.plan .for{margin:0 0 18px;font-size:15px}
+.plan ul{list-style:none;padding:0;margin:0 0 24px;flex:1}
+.plan li{padding:7px 0;border-top:1px solid var(--il);font-size:16px;color:var(--if)}
+.plan .btn{text-align:center}
+.tag{align-self:flex-start;font-size:13px;font-weight:600;border:1px solid var(--if);border-radius:999px;padding:2px 12px;margin-bottom:12px}
+.note{margin:22px 0 0;font-size:15px}
+.inc{display:grid;grid-template-columns:repeat(2,1fr);gap:0 48px}
+.inc div{border-top:1px solid var(--line);padding:18px 0 20px}
+.inc b{display:block;font:700 21px "Bricolage Grotesque",sans-serif;letter-spacing:-.02em;margin-bottom:4px}
+.inc span{color:var(--mut)}
+.mon .plan{border-color:var(--line)}
+.mon .plan.pop{border-color:var(--fg)}
+.mon .price,.mon .plan li{color:var(--fg)}
+.mon .plan li{border-top-color:var(--line)}
+.mon .tag{border-color:var(--fg)}
+.mon .for{color:var(--mut)}
+.pay{display:block;text-align:center;margin-top:12px;font-size:14px;color:var(--im)}
+.mon .pay{color:var(--mut)}
+.fit{display:flex;flex-wrap:wrap;gap:10px}
+.fit span{border:1px solid var(--fg);border-radius:999px;padding:8px 18px;font-weight:500}
+details{border-top:1px solid var(--line);padding:18px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font:700 20px "Bricolage Grotesque",sans-serif;letter-spacing:-.02em}
+details p{margin:10px 0 0;color:var(--mut);max-width:44em}
+.fgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.fgrid p.l{font-size:19px;max-width:24em}
+label{display:block;font-size:14px;font-weight:600;margin:14px 0 5px}
+input,select,textarea{width:100%;font:inherit;font-size:16px;color:var(--if);background:transparent;border:1px solid var(--im);border-radius:10px;padding:12px 14px}
+select option{color:#0a0a0a}
+textarea{min-height:92px}
+.inv form .btn{width:100%;margin-top:20px}
+.fine{font-size:13px;margin:10px 0 0}
+.send .btn{display:block;text-align:center;margin-top:10px}
+.send .btn.o{background:transparent;color:var(--if)}
+footer{padding:30px 0 40px;color:var(--mut);font-size:14px}
+.mob{position:fixed;left:0;right:0;bottom:0;z-index:6;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:var(--bg);border-top:1px solid var(--line)}
+.mob .btn{display:block;text-align:center}
+@media (min-width:821px){.mob{display:none}body{padding-bottom:0}}
+@media (max-width:820px){.hero{grid-template-columns:1fr;padding:44px 0 56px;gap:34px}.strip .w,.steps,.plans,.fgrid,.inc{grid-template-columns:1fr}nav ul{display:none}section{padding:60px 0}}
+</style></head><body>
+
+<nav><div class="w">
+<a class="logo" href="#top">Inceptly</a>
+<ul><li><a href="#how">How it works</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#faq">FAQ</a></li></ul>
+<a class="btn s" href="#start">Get my free preview</a>
+</div></nav>
+
+<main id="top">
+<div class="w hero">
+<div>
+<h1>Websites that get your phone ringing.</h1>
+<p class="sub">Custom sites for local businesses. We build a preview of your site first, and you only pay if you love it.</p>
+<div class="row"><a class="btn" href="#start">Get my free preview</a><a class="btn o" href="#pricing">See pricing</a></div>
+<ul class="checks"><li>Looks right on every phone</li><li>Call button and quote form</li><li>Fast and easy to use</li></ul>
+</div>
+<div class="br" aria-hidden="true"><div class="bar"><i></i><i></i><i></i></div>
+<div class="pg"><div class="sk h"></div><div class="sk" style="width:90%"></div><div class="sk" style="width:64%"></div><div class="sk b"></div>
+<div class="tri"><div></div><div></div><div></div></div></div></div>
+</div>
+
+<div class="strip"><div class="w">
+<div><h3>Built to get calls</h3><p>One clear next step on every screen: call, or request a quote.</p></div>
+<div><h3>Made for phones first</h3><p>Most local customers find you on their phone, so we start there.</p></div>
+<div><h3>You own it</h3><p>Your site, your accounts. Nothing is held hostage.</p></div>
+</div></div>
+
+<section id="how"><div class="w">
+<h2>From first message to live site.</h2>
+<div class="steps">
+<div><b>1. Tell us about your business</b><span>Fill out a two-minute form with what you do and who you serve.</span></div>
+<div><b>2. See your free preview</b><span>We build a preview of your site and send photos of it to your email.</span></div>
+<div><b>3. Approve and go live</b><span>Happy with it? We put it live and connect your quote form.</span></div>
+</div></div></section>
+
+<section class="inv" id="pricing"><div class="w">
+<h2>Simple pricing. No surprises.</h2>
+<div class="plans">
+<div class="plan"><h3>Starter</h3><div class="price">$499</div><p class="for">One-page site for a new or small business.</p>
+<ul><li>One-page site</li><li>Call button and quote form</li><li>Works on every phone</li><li>Fast loading and easy to read</li></ul>
+<a class="btn o" href="#start" data-plan="Starter ($499)">Get started</a>
+<a class="pay" href="https://buy.stripe.com/4gMdR9aWl0Gm5FQ46H4ZG07" target="_blank" rel="noopener">Already approved? Pay now</a></div>
+<div class="plan pop"><span class="tag">Most popular</span><h3>Business</h3><div class="price">$1,200</div><p class="for">A full site that explains every service you offer.</p>
+<ul><li>Up to 5 pages</li><li>A page for each main service</li><li>Photo gallery of your work</li><li>Changes after your preview</li></ul>
+<a class="btn" href="#start" data-plan="Business ($1,200)">Get started</a>
+<a class="pay" href="https://buy.stripe.com/4gM4gz2pPgFk2tE9r14ZG08" target="_blank" rel="noopener">Already approved? Pay now</a></div>
+<div class="plan"><h3>Growth</h3><div class="price">$2,500</div><p class="for">Built to bring in more customer requests.</p>
+<ul><li>Everything in Business</li><li>A planning call before we build</li><li>Review request setup</li><li>Priority edits for 30 days</li></ul>
+<a class="btn o" href="#start" data-plan="Growth ($2,500)">Get started</a>
+<a class="pay" href="https://buy.stripe.com/6oU9AT6G5agWgkuav54ZG09" target="_blank" rel="noopener">Already approved? Pay now</a></div>
+</div>
+<p class="note">Prefer to pay monthly instead? <a href="#monthly">See the monthly plans</a>. Already approved your preview? Use the link under your plan.</p>
+</div></section>
+
+<section><div class="w">
+<h2>Everything in the Business plan.</h2>
+<div class="inc">
+<div><b>Up to 5 pages</b><span>Home, About, Services, Gallery, and Contact. Everything a customer wants to know before they call.</span></div>
+<div><b>A page for each main service</b><span>Each service you offer gets its own page that explains it in plain words, so the right customers find the right page.</span></div>
+<div><b>Photo gallery of your work</b><span>Your best jobs on display. Send us your photos and we'll arrange them so they load fast on a phone.</span></div>
+<div><b>Call button and quote form</b><span>One tap to call from a phone, and a short form that sends each request straight to your email.</span></div>
+<div><b>Mobile-ready design</b><span>Every page is built for a phone screen first, then checked on a tablet and a computer.</span></div>
+<div><b>Changes after your preview</b><span>You look at the preview, tell us what to change, and we update it before it goes live.</span></div>
+</div></div></section>
+
+<section class="mon" id="monthly" style="padding-top:0"><div class="w">
+<h2>Or pay monthly. The whole website is included.</h2>
+<div class="plans">
+<div class="plan"><h3>Starter</h3><div class="price">$49<small>/mo</small></div><p class="for">The Starter website, built and kept running for you.</p>
+<ul><li>The whole Starter website</li><li>Hosting and backups</li><li>Small edits when you need them</li><li>Call button and quote form</li></ul>
+<a class="btn o" href="#start" data-plan="Starter monthly ($49/mo)">Get started</a>
+<a class="pay" href="https://buy.stripe.com/9B628raWl4WC2tEcDd4ZG0a" target="_blank" rel="noopener">Already approved? Subscribe now</a></div>
+<div class="plan pop"><span class="tag">Most popular</span><h3>Business</h3><div class="price">$99<small>/mo</small></div><p class="for">The full Business website, built and kept running for you.</p>
+<ul><li>The whole Business website</li><li>Hosting and backups</li><li>Small edits every month</li><li>Photo gallery of your work</li></ul>
+<a class="btn" href="#start" data-plan="Business monthly ($99/mo)">Get started</a>
+<a class="pay" href="https://buy.stripe.com/fZu4gz3tT88Od8i6eP4ZG0b" target="_blank" rel="noopener">Already approved? Subscribe now</a></div>
+<div class="plan"><h3>Growth</h3><div class="price">$199<small>/mo</small></div><p class="for">The Growth website, built and kept running for you.</p>
+<ul><li>The whole Growth website</li><li>Hosting and backups</li><li>Priority edits</li><li>Review request setup</li></ul>
+<a class="btn o" href="#start" data-plan="Growth monthly ($199/mo)">Get started</a>
+<a class="pay" href="https://buy.stripe.com/fZu7sL9Sh9cS9W68mX4ZG0c" target="_blank" rel="noopener">Already approved? Subscribe now</a></div>
+</div>
+<p class="note" style="color:var(--mut)">You don't pay for the build up front. The monthly price covers the website and keeping it running.</p>
+</div></section>
+
+<section><div class="w">
+<h2>Made for local businesses.</h2>
+<div class="fit"><span>Roofing</span><span>Plumbing</span><span>HVAC</span><span>Landscaping</span><span>Dental</span><span>Cleaning</span><span>Auto repair</span><span>Pest control</span></div>
+</div></section>
+
+<section id="faq" style="padding-top:0"><div class="w">
+<h2>Questions.</h2>
+<details><summary>Do I really see it before I pay?</summary><p>Yes. We send photos of your preview to your email first. If you don't like it, you owe nothing.</p></details>
+<details><summary>Who owns the website?</summary><p>You do. We never hold your accounts hostage.</p></details>
+<details><summary>What if I already have a website?</summary><p>We can rebuild it or replace it with a new one. Tell us about it in the form.</p></details>
+<details><summary>Can customers contact me from the site?</summary><p>Yes. Every site has a call button and a quote form that sends requests to your email.</p></details>
+<details><summary>What do the monthly plans include?</summary><p>The whole website, plus hosting, backups, and small edits like a new photo or phone number, for one monthly price. You don't pay for the build up front.</p></details>
+</div></section>
+
+<section class="inv" id="start"><div class="w fgrid">
+<div><h2>Get your free preview.</h2><p class="l">Tell us about your business and we'll come back with a preview of your new site. It takes about two minutes.</p></div>
+<div>
+<div id="fw"><form id="f">
+<label for="nm">Your name</label><input id="nm" required autocomplete="name">
+<label for="em">Email</label><input id="em" type="email" required autocomplete="email">
+<label for="ph">Phone</label><input id="ph" type="tel" autocomplete="tel">
+<label for="biz">Business name and current website, if you have one</label><input id="biz" required>
+<label for="pl">Plan</label>
+<select id="pl"><option>Starter ($499)</option><option selected>Business ($1,200)</option><option>Growth ($2,500)</option><option>Starter monthly ($49/mo)</option><option>Business monthly ($99/mo)</option><option>Growth monthly ($199/mo)</option><option>Not sure yet</option></select>
+<label for="more">What do you do, and where?</label><textarea id="more" required></textarea>
+<button class="btn" type="submit">Get my free preview</button>
+<p class="fine mut">We reply by email. No spam, and nothing to pay for the preview.</p>
+</form></div>
+<div id="done" class="send" hidden>
+<h3 style="font-size:30px;margin-bottom:8px">One last step.</h3>
+<p>Your request is ready. Send it with one of these and we'll take it from there.</p>
+<a class="btn" id="gm" target="_blank" rel="noopener">Send with Gmail</a>
+<a class="btn o" id="ml">Send with my email app</a>
+<button class="btn o" id="cp" type="button" style="width:100%">Copy my request</button>
+<p class="fine" id="cpm"></p>
+</div>
+</div></div></section>
+</main>
+
+<footer><div class="w">Inceptly. Websites for local businesses.</div></footer>
+<div class="mob"><a class="btn" href="#start">Get my free preview</a></div>
+
+<script>
+const TO="incepto08@gmail.com"; // change to the email that should receive requests
+const $=id=>document.getElementById(id);
+document.querySelectorAll("[data-plan]").forEach(a=>a.addEventListener("click",()=>{$("pl").value=a.dataset.plan}));
+$("f").addEventListener("submit",e=>{
+ e.preventDefault();
+ const g=id=>$(id).value.trim();
+ const subject="Free preview request: "+g("biz");
+ const body=["Name: "+g("nm"),"Email: "+g("em"),"Phone: "+g("ph"),"Business / site: "+g("biz"),"Plan: "+g("pl"),"","About the business:",g("more")].join("\n");
+ $("gm").href="https://mail.google.com/mail/?view=cm&fs=1&to="+encodeURIComponent(TO)+"&su="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+ $("ml").href="mailto:"+TO+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+ $("cp").onclick=async()=>{try{await navigator.clipboard.writeText("To: "+TO+"\nSubject: "+subject+"\n\n"+body);$("cpm").textContent="Copied. Paste it into an email to "+TO+"."}catch(x){$("cpm").textContent="Copy didn't work. Use one of the other buttons."}};
+ $("fw").hidden=true;$("done").hidden=false;
+ $("start").scrollIntoView({block:"start"});
+});
+</script></body></html>
